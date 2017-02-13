@@ -5,17 +5,17 @@ namespace PingPong
 {
   public class PingPongTest
   {
-    // [Fact]
-    // public void listNumbers_ForPrintingMultiplesOfThree_PrintPing()
-    // {
-    //   int number01 = 6;
-    //   PingPongGenerator newPingPongGenerator = new PingPongGenerator(number01);
-    //   List<string> testList = new List<string> { "1", "2", "ping", "4","5","ping" };
-    //
-    //   List<string> result = newPingPongGenerator.listNumbers();
-    //
-    //   Assert.Equal(testList, result);
-    // }
+    [Fact]
+    public void listNumbers_ForPrintingMultiplesOfThree_PrintPing()
+    {
+      int number01 = 4;
+      PingPongGenerator newPingPongGenerator = new PingPongGenerator(number01);
+      List<string> testList = new List<string> { "1", "2", "ping", "4" };
+
+      List<string> result = newPingPongGenerator.listNumbers();
+
+      Assert.Equal(testList, result);
+    }
     [Fact]
     public void listNumbers_ForPrintingMultiplesOfFive_PrintPong()
     {
@@ -34,6 +34,14 @@ namespace PingPong
       List<string> result = newPingPongGenerator.listNumbers();
       Assert.Equal(testList,result);
     }
-
+    [Fact]
+    public void listNumbers_ForNegativeNumbers_PrintError()
+    {
+      int number03 = -15;
+      PingPongGenerator newPingPongGenerator = new PingPongGenerator(-15);
+      List<string> testList = new List<string> {"Please enter a positive number"};
+      List<string> result = newPingPongGenerator.listNumbers();
+      Assert.Equal(testList,result);
+    }
   }
 }

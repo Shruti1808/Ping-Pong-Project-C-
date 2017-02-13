@@ -13,22 +13,28 @@ namespace PingPong.Objects
 
     public List<string> listNumbers()
     {
-      for(int i = 1; i <= _number; i++)
+      if (_number < 1)
       {
-        if(i % 15 == 0)
+        _listPingPong.Add("Please enter a positive number");
+      }
+      else{
+        for(int i = 1; i <= _number; i++)
         {
-          _listPingPong.Add("pingpong");
-        }
-        else if (i % 3 ==0)
-        {
-          _listPingPong.Add("ping");
-        }
-        else if (i % 5 == 0){
-          _listPingPong.Add("pong");
-        }
-        else
-        {
-          _listPingPong.Add(i.ToString());
+          if(i % 15 == 0)
+          {
+            _listPingPong.Add("pingpong");
+          }
+          else if (i % 3 ==0)
+          {
+            _listPingPong.Add("ping");
+          }
+          else if (i % 5 == 0){
+            _listPingPong.Add("pong");
+          }
+          else
+          {
+            _listPingPong.Add(i.ToString());
+          }
         }
       }
       return _listPingPong;
