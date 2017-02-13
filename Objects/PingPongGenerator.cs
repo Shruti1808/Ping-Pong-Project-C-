@@ -1,4 +1,4 @@
-namespace PingPong
+namespace PingPong.Objects
 {
   public class PingPongGenerator
   {

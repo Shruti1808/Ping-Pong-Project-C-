@@ -1,4 +1,5 @@
 using Xunit;
+using PingPong.Objects;
 namespace PingPong
 {
   public class PingPongTest
