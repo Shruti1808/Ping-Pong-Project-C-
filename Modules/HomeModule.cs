@@ -14,7 +14,7 @@ namespace PingPong
       Post["/result"] = _ => {
         int userInput = int.Parse(Request.Form["number"]);
         PingPongGenerator newPingPongGenerator = new PingPongGenerator(userInput);
-        List<int> listNumbers = newPingPongGenerator.listNumbers();
+        List<string> listNumbers = newPingPongGenerator.listNumbers();
         return View["view_pingpong", listNumbers];
       };
     }
