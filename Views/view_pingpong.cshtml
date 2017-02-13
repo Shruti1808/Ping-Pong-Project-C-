@@ -5,7 +5,12 @@
     <title>Ping Pong</title>
   </head>
   <body>
-    <p>@Model</p>
+    <ul>
+      @foreach (int number in @Model)
+      {
+        <li>@number</li>
+      }
+    </ul>
 
   </body>
 </html>
